@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Any Help Any Time</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,7 +91,7 @@
   .icon-circle-btn:hover{background:var(--brand-cyan);}
   .menu-toggle{display:none; position:relative; z-index:41;}
   .nav-backdrop{display:none;}
-  @media (max-width: 880px){
+  @media (max-width: 1080px){
     nav.primary-nav{position:fixed; inset:0 0 0 auto; width:min(300px,80vw); background:var(--surface); flex-direction:column; align-items:stretch; border-radius:0; border:none; box-shadow:none; padding:calc(100px + env(safe-area-inset-top,0px)) 16px 16px; box-shadow:-10px 0 30px rgba(0,0,0,.15); transform:translateX(100%); transition:transform .25s ease; overflow-y:auto;}
     nav.primary-nav.open{transform:translateX(0);}
     .primary-nav a, .primary-nav button.navlink{border-radius:12px; text-align:left;}
@@ -280,6 +285,8 @@
   .modal-close:hover{background:var(--brand-cyan);}
   .modal-box .field input, .modal-box .field textarea{background:var(--surface-2);}
 </style>
+</head>
+<body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -1570,3 +1577,5 @@
   /* keep-alive on republish (no shared game/long-form state to carry) */
 })();
 </script>
+</body>
+</html>
