@@ -6,7 +6,7 @@
 <title>Any Help Any Time</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0A1040; --ink-soft:#3A4270; --muted:#6B7290;
@@ -39,7 +39,7 @@
   *{box-sizing:border-box;}
   html{font-size:calc(100% * var(--font-scale));}
   body{background:var(--bg); color:var(--ink); font-family:"Nunito",system-ui,-apple-system,Segoe UI,Roboto,sans-serif; font-size:17px; line-height:1.55;}
-  h1,h2,h3,h4{font-family:"Baloo 2",system-ui,sans-serif; font-weight:700; color:var(--ink); line-height:1.12; text-wrap:balance; margin:0;}
+  h1,h2,h3,h4{font-family:"Fraunces",system-ui,sans-serif; font-weight:700; color:var(--ink); line-height:1.12; text-wrap:balance; margin:0;}
   p{margin:0;}
   a{color:inherit;}
   ul{margin:0; padding:0; list-style:none;}
@@ -69,7 +69,7 @@
   /* header */
   .site-header{position:sticky; top:env(safe-area-inset-top,0px); z-index:40; background:var(--bg); border-bottom:none; padding-block:14px;}
   .header-row{display:flex; align-items:center; justify-content:space-between; gap:16px; padding-block:0; min-height:56px;}
-  .brand{display:inline-flex; align-items:center; gap:12px; font-family:"Baloo 2",sans-serif; font-weight:800; font-size:23px; text-decoration:none; color:var(--primary-dark); background:var(--brand-cyan); padding:13px 28px 13px 15px; border-radius:999px; margin-left:0; height:auto; line-height:1.15;}
+  .brand{display:inline-flex; align-items:center; gap:12px; font-family:"Fraunces",sans-serif; font-weight:800; font-size:23px; text-decoration:none; color:var(--primary-dark); background:var(--brand-cyan); padding:13px 28px 13px 15px; border-radius:999px; margin-left:0; height:auto; line-height:1.15;}
   .brand .logo-badge{display:flex; align-items:center; justify-content:center; flex:none;}
   .brand .logo-badge svg{width:27px; height:27px; color:var(--primary-dark);}
   .brand svg{flex:none;}
@@ -134,7 +134,7 @@
   .hero-actions{display:flex; align-items:center; gap:16px; margin-top:26px; flex-wrap:wrap;}
   .hero-phone{font-weight:700; color:var(--primary-dark); font-size:14.5px;}
   .hero-stats{display:flex; gap:18px; margin-top:34px; flex-wrap:wrap;}
-  .hero-stats div strong{display:block; font-family:"Baloo 2",sans-serif; font-size:26px; color:var(--primary-dark);}
+  .hero-stats div strong{display:block; font-family:"Fraunces",sans-serif; font-size:26px; color:var(--primary-dark);}
   .hero-stats div span{font-size:13px; color:var(--muted);}
   .hero-photo{position:relative; min-height:480px;}
   .hero-photo svg{position:absolute; inset:0; width:100%; height:100%;}
@@ -258,7 +258,7 @@
   footer{background:#080D33; color:#E7ECFB; padding-block:48px calc(28px + env(safe-area-inset-bottom,0px)); margin-top:40px;}
   footer a{text-decoration:none; color:#AFC0EF;}
   footer a:hover{color:var(--brand-cyan);}
-  .foot-brand{display:flex; align-items:center; gap:10px; font-family:"Baloo 2",sans-serif; font-weight:700; font-size:20px; color:#fff;}
+  .foot-brand{display:flex; align-items:center; gap:10px; font-family:"Fraunces",sans-serif; font-weight:700; font-size:20px; color:#fff;}
   .foot-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:32px;}
   @media (max-width:760px){ .foot-grid{grid-template-columns:1fr 1fr;} }
   @media (max-width:480px){ .foot-grid{grid-template-columns:1fr;} }
@@ -271,6 +271,12 @@
   .social-row svg{width:17px; height:17px;}
 
   .sample-tag{position:absolute; top:10px; right:10px; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; background:rgba(0,0,0,.55); color:#fff; padding:3px 8px; border-radius:100px;}
+  .carousel{overflow:hidden;}
+  .carousel-track{display:flex; transition:transform .4s ease;}
+  .carousel-track .card{flex:0 0 100%; max-width:560px; margin-inline:auto;}
+  .carousel-dots{display:flex; justify-content:center; gap:8px; margin-top:24px;}
+  .carousel-dots button{width:9px; height:9px; border-radius:50%; border:none; background:var(--border); padding:0; cursor:pointer;}
+  .carousel-dots button.active{background:var(--primary); width:22px; border-radius:6px;}
   .rel{position:relative;}
   .center{text-align:center;}
   .mt8{margin-top:8px;} .mt16{margin-top:16px;} .mt24{margin-top:24px;} .mt32{margin-top:32px;}
@@ -301,13 +307,20 @@
       <a href="#services" data-nav="services">Services</a>
       <a href="#pricing" data-nav="pricing">Pricing</a>
       <div class="has-menu">
-        <button type="button" class="navlink" data-nav-group="about,workers,trust,festivals,faq,find" aria-haspopup="true" aria-expanded="false">Pages ▾</button>
+        <button type="button" class="navlink" data-nav-group="about,workers,trust,festivals,faq,find,resources,employers,health-plans,careers,impact,locations,support" aria-haspopup="true" aria-expanded="false">Pages ▾</button>
         <div class="dropdown">
           <a href="#about" data-nav="about">About Us</a>
           <a href="#find" data-nav="find">Find a Companion</a>
           <a href="#workers" data-nav="workers">Our Companions &amp; Ratings</a>
           <a href="#trust" data-nav="trust">Trust &amp; Safety</a>
           <a href="#festivals" data-nav="festivals">Festivals &amp; Events</a>
+          <a href="#resources" data-nav="resources">Resources</a>
+          <a href="#impact" data-nav="impact">Impact</a>
+          <a href="#employers" data-nav="employers">For Employers</a>
+          <a href="#health-plans" data-nav="health-plans">Health Plans &amp; Funding</a>
+          <a href="#careers" data-nav="careers">Work With Us</a>
+          <a href="#locations" data-nav="locations">Service Areas</a>
+          <a href="#support" data-nav="support">Support</a>
           <a href="#faq" data-nav="faq">FAQ</a>
         </div>
       </div>
@@ -334,10 +347,13 @@
     <div class="hero-grid">
       <div class="hero-copy">
         <h1>Hi! We're Any Help Any Time.</h1>
-        <p class="mt8" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; color:var(--primary);">We all need a hand sometimes. That's why Any Help Any Time is here.</p>
+        <p class="mt8" style="font-family:'Fraunces',sans-serif; font-weight:700; font-size:19px; color:var(--primary);">We all need a hand sometimes. That's why Any Help Any Time is here.</p>
         <p class="lede mt16">We pick your elder up from home, take them where they need to go, and bring them back — with outings, errands, meals, hospital visits and routine health checks along the way, all from companions you can rate and trust.</p>
         <div class="hero-actions">
-          <a href="#register" class="btn btn-sage" data-nav="register">Register Now</a>
+          <a href="#register" class="btn btn-sage" data-nav="register">Pay as you go</a>
+          <a href="#health-plans" class="btn btn-outline" data-nav="health-plans">Use a health plan or benefit</a>
+        </div>
+        <div class="hero-actions" style="margin-top:10px;">
           <span class="hero-phone">OR <span data-copy-phone>+61 2 5550 1234</span></span>
         </div>
         <div class="hero-stats">
@@ -371,7 +387,7 @@
         </div>
         <div>
           <svg width="34" height="26" viewBox="0 0 34 26" fill="var(--primary)"><path d="M0 26V15.6C0 6.9 5.4 1.3 13.6 0l1.7 4.4C10 5.7 7.3 8.9 7.3 13h6.4V26H0Zm18.7 0V15.6c0-8.7 5.4-14.3 13.6-15.6L34 4.4c-5.3 1.3-8 4.5-8 8.6h6.4V26H18.7Z"/></svg>
-          <p class="mt16" style="font-family:'Baloo 2',sans-serif; font-size:24px; color:var(--primary-dark); font-weight:600;">We believe in caring for the person, not just the visit.</p>
+          <p class="mt16" style="font-family:'Fraunces',sans-serif; font-size:24px; color:var(--primary-dark); font-weight:600;">We believe in caring for the person, not just the visit.</p>
           <div style="width:60px; height:3px; background:var(--primary); margin-top:20px; border-radius:2px;"></div>
         </div>
       </div>
@@ -470,7 +486,10 @@
         <span class="eyebrow">Patient Testimonials</span>
         <h2>What our families say about us</h2>
       </div>
-      <div class="grid grid-3" id="home-testimonials"></div>
+      <div class="carousel">
+        <div class="carousel-track" id="home-testimonials"></div>
+      </div>
+      <div class="carousel-dots" id="home-testimonials-dots"></div>
     </div>
   </section>
 
@@ -637,6 +656,40 @@
       <div class="card"><h3 style="font-size:18px;">Built for every age</h3><p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Large text, simple navigation, and clear steps — this site is designed to be used by elders themselves, not just their families.</p></div>
       <div class="card"><h3 style="font-size:18px;">More than a visit</h3><p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Festivals, outings and community events mean care doesn't stop at errands and health checks.</p></div>
     </div>
+
+    <div class="section-head" style="margin-top:48px;">
+      <span class="eyebrow">Our story</span>
+      <h2 style="font-size:28px;">Why we started Any Help Any Time</h2>
+      <p class="lede">Sample founding story — replace this with your own. It started with one family member who needed a ride to a hospital appointment, and someone to sit with them afterward. We built Any Help Any Time so no family has to figure that out alone.</p>
+    </div>
+
+    <div class="section-head" style="margin-top:48px;">
+      <span class="eyebrow">What we stand for</span>
+      <h2 style="font-size:28px;">Our values</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 1.5l2.47 5.19 5.72.55-4.3 3.87 1.24 5.6L10 13.75 4.87 16.7l1.24-5.59-4.3-3.87 5.72-.55L10 1.5Z"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">Mission-driven</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Every visit is about the person in front of us, not a checklist to get through.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4 4 8-8"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">Reliability</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">We show up when we say we will — families are counting on it.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.8A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.2C19 15.6 12 20 12 20Z"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">Respect</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Elders are treated as capable adults with their own preferences, not cases to manage.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"/><path d="M12 3v-.5M6 5l-.5-.5M18 5l.5-.5"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">Community</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Care doesn't end at the front door — festivals and outings keep people connected.</p>
+      </div>
+    </div>
+
     <div class="notice mt32">This is a first draft of the About page — add your organization's real story and founding date here.</div>
   </div>
 </section>
@@ -684,6 +737,34 @@
         <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">A real person is a phone call away if anything comes up before, during or after a visit — not a bot.</p>
       </div>
     </div>
+
+    <div class="section-head" style="margin-top:48px;">
+      <span class="eyebrow">Every visit, protected</span>
+      <h2 style="font-size:26px;">Built-in safety features</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2"/><path d="M13.5 10h4M13.5 14h3"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">Know who's coming, before they arrive</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">See your companion's name, photo and vehicle details ahead of every visit — no surprises at the door.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H9l-4 4V5Z"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">Numbers stay private</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Messages between families and companions can go through us, so personal phone numbers don't have to be shared.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v6"/><circle cx="12" cy="16.5" r="0.75" fill="currentColor" stroke="none"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">One-tap help, any time</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">If something feels wrong during a visit, a single call connects straight to our support team.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11A8 8 0 1 0 18.5 16"/><path d="M20 6v5h-5"/></svg></div>
+        <h3 class="mt16" style="font-size:17px;">Checks don't stop at day one</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Background screening is repeated on an ongoing basis, not just before a companion's first visit.</p>
+      </div>
+    </div>
+
     <div class="notice mt32">Have a safety question or concern? <a href="#contact" data-nav="contact" style="color:var(--accent-dark);font-weight:700;">Contact our team</a> any time, or read our full <a href="#legal" data-nav="legal" style="color:var(--accent-dark);font-weight:700;">Terms &amp; Conditions</a>.</div>
   </div>
 </section>
@@ -711,6 +792,212 @@
       <h1 style="font-size:36px;">Common questions</h1>
     </div>
     <div id="faq-list"></div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="view-resources" class="view" data-view hidden>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Resources</span>
+      <h1 style="font-size:36px;">Guides, research &amp; our impact</h1>
+      <p class="lede">Articles and guides for families, companions and partners — plus a look at the difference companion care makes.</p>
+    </div>
+    <div class="grid grid-4" id="resources-impact"></div>
+    <p class="mt16" style="font-size:13px;color:var(--muted);">Sample figures shown above — replace with your organization's real numbers before publishing.</p>
+    <div class="section-head" style="margin-top:48px;">
+      <span class="eyebrow">Guides &amp; articles</span>
+      <h2 style="font-size:26px;">Start here</h2>
+    </div>
+    <div class="tabbar" id="resources-filter"></div>
+    <div class="grid grid-3 mt24" id="resources-list"></div>
+    <div class="notice mt32">This is a sample resource library — replace these with your organization's real guides, research and articles before publishing.</div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="view-impact" class="view" data-view hidden>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Impact</span>
+      <h1 style="font-size:36px;">The difference companion care makes</h1>
+      <p class="lede">A look at what Any Help Any Time offers today, and the kind of outcomes regular companion visits aim to deliver.</p>
+    </div>
+
+    <div class="section-head" style="margin-top:40px;">
+      <span class="eyebrow">Cost &amp; peace of mind</span>
+      <h2 style="font-size:26px;">Real numbers, right now</h2>
+    </div>
+    <div class="grid grid-3 mt24" id="impact-cost"></div>
+
+    <div class="section-head" style="margin-top:48px;">
+      <span class="eyebrow">Everyday support</span>
+      <h2 style="font-size:26px;">More ways to help, every week</h2>
+    </div>
+    <div class="grid grid-3 mt24" id="impact-utilization"></div>
+
+    <div class="section-head" style="margin-top:48px;">
+      <span class="eyebrow">Member outcomes</span>
+      <h2 style="font-size:26px;">How families &amp; elders feel afterward</h2>
+    </div>
+    <div class="grid grid-3 mt24" id="impact-outcomes"></div>
+    <p class="mt16" style="font-size:13px;color:var(--muted);">Illustrative targets only — no visits have happened yet, so nothing above is a measured result. Replace with your real figures, with sources, once you have them.</p>
+
+    <div class="notice mt32">This is a first draft of the Impact page. The "Cost &amp; peace of mind" and "Everyday support" figures reflect this site's actual pricing and service list; the "Member outcomes" figures are placeholders and must not be published as real results.</div>
+  </div>
+</section>
+
+<!-- EMPLOYERS -->
+<section id="view-employers" class="view" data-view hidden>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">For employers</span>
+      <h1 style="font-size:36px;">Support the caregivers on your team</h1>
+      <p class="lede">Employees juggling work and an aging parent take more leave, more stress and more sick days. Offer Any Help Any Time as a workplace benefit and give them a hand.</p>
+      <a href="#contact" data-nav="contact" class="btn btn-primary" style="margin-top:16px;">Talk to our partnerships team</a>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.8A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.2C19 15.6 12 20 12 20Z"/></svg></div>
+        <h3 class="mt16" style="font-size:18px;">Reduces caregiver burnout</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Give staff a trusted place to turn when an aging parent needs help, instead of carrying it alone.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></div>
+        <h3 class="mt16" style="font-size:18px;">Fewer unplanned absences</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Scheduled visits mean fewer last-minute scrambles when a family member needs care during the workday.</p>
+      </div>
+      <div class="card">
+        <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4v12M4 10h12"/></svg></div>
+        <h3 class="mt16" style="font-size:18px;">Simple to roll out</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Add Any Help Any Time to your existing benefits package — we handle onboarding for your employees.</p>
+      </div>
+    </div>
+    <div class="notice mt32">This is a first draft of the Employers page — add your real partnership terms and onboarding process before publishing.</div>
+  </div>
+</section>
+
+<!-- HEALTH PLANS & FUNDING -->
+<section id="view-health-plans" class="view" data-view hidden>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Health plans &amp; funding</span>
+      <h1 style="font-size:36px;">More than one way to pay for care</h1>
+      <p class="lede">Alongside paying as you go, some families may be able to put existing funding toward Any Help Any Time visits.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 style="font-size:18px;">Home Care Package</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">If your elder holds an approved Home Care Package, its funds may be able to cover companion visits — check with your package provider.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px;">DVA &amp; community care programs</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Veterans and eligible community care participants may have access to funded in-home support — ask us what's possible.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px;">Employer benefit</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Work somewhere that partners with us? Visits booked through your employer's benefit are billed directly. See <a href="#employers" data-nav="employers" style="color:var(--accent-dark);font-weight:700;">For Employers</a>.</p>
+      </div>
+    </div>
+    <div class="notice mt32">This is a first draft — confirm exactly which funding types you accept and how claims are processed before publishing. Nothing here has been verified with any scheme.</div>
+    <div class="center mt32">
+      <a href="#register" data-nav="register" class="btn btn-primary">Check what you're eligible for</a>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS / LIFE AS A COMPANION -->
+<section id="view-careers" class="view" data-view hidden>
+  <div class="wrap">
+    <div class="grid grid-2" style="align-items:center; margin-bottom:28px;">
+      <div class="section-head" style="margin-bottom:0;">
+        <span class="eyebrow">Work with us</span>
+        <h1 style="font-size:36px;">The side gig where showing up is the whole job</h1>
+        <p class="lede">Companions set their own schedule, get paid for the visits they choose, and spend their time with people who are genuinely glad to see them. No healthcare background required.</p>
+        <a href="#register" data-nav="register" class="btn btn-primary" style="margin-top:16px;">Apply to become a companion</a>
+      </div>
+      <div class="grid grid-3" style="gap:14px;">
+        <div class="card center" style="padding:20px;"><div style="font-family:'Fraunces',sans-serif;font-size:24px;color:var(--primary-dark);font-weight:800;">You choose</div><div class="mt8" style="font-size:12.5px;color:var(--muted);">Which visits &amp; when</div></div>
+        <div class="card center" style="padding:20px;"><div style="font-family:'Fraunces',sans-serif;font-size:24px;color:var(--primary-dark);font-weight:800;">Paid per visit</div><div class="mt8" style="font-size:12.5px;color:var(--muted);">Plus mileage where offered</div></div>
+        <div class="card center" style="padding:20px;"><div style="font-family:'Fraunces',sans-serif;font-size:24px;color:var(--primary-dark);font-weight:800;">No experience</div><div class="mt8" style="font-size:12.5px;color:var(--muted);">Just patience &amp; reliability</div></div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <span class="eyebrow">How joining works</span>
+      <h2 style="font-size:28px;">Three steps to your first visit</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><h3 class="mt8" style="font-size:17px">Apply</h3><p class="mt8" style="color:var(--ink-soft);font-size:14.5px">Tell us about yourself on the Companion tab of Register — it takes a couple of minutes.</p></div>
+      <div class="step"><div class="step-num">02</div><h3 class="mt8" style="font-size:17px">Get verified</h3><p class="mt8" style="color:var(--ink-soft);font-size:14.5px">ID verification and a background check, the same as every companion on the platform.</p></div>
+      <div class="step"><div class="step-num">03</div><h3 class="mt8" style="font-size:17px">Choose your first visit</h3><p class="mt8" style="color:var(--ink-soft);font-size:14.5px">Browse visits near you and pick the ones that fit your schedule.</p></div>
+    </div>
+
+    <div class="section-head" style="margin-top:48px;">
+      <span class="eyebrow">Why companions stay</span>
+      <h2 style="font-size:28px;">What our companions say</h2>
+    </div>
+    <div class="grid grid-3 mt24" id="companion-quotes"></div>
+
+    <div class="notice mt32">This is a first draft of the Work With Us page — replace the sample quotes with real companion stories, and confirm actual pay &amp; mileage terms, before publishing.</div>
+  </div>
+</section>
+
+<!-- LOCATIONS / SERVICE AREAS -->
+<section id="view-locations" class="view" data-view hidden>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Service areas</span>
+      <h1 style="font-size:36px;">Where we visit</h1>
+      <p class="lede">Any Help Any Time currently operates across Sydney's inner suburbs — see below, or search by suburb to find a companion near you.</p>
+    </div>
+    <div class="grid grid-4" id="locations-list"></div>
+    <div class="notice mt32">This is a sample list of suburbs — replace it with your organization's real service area before publishing.</div>
+    <div class="center mt32">
+      <a href="#find" data-nav="find" class="btn btn-primary">Search by suburb</a>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section id="view-support" class="view" data-view hidden>
+  <div class="wrap" style="max-width:900px;">
+    <div class="section-head">
+      <span class="eyebrow">Support</span>
+      <h1 style="font-size:36px;">How can we help?</h1>
+      <p class="lede">Tell us who you are and we'll point you to the right place.</p>
+    </div>
+    <div class="grid grid-3 mt24">
+      <div class="card">
+        <h3 style="font-size:18px;">Families &amp; elders</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Booking a visit, managing your account, or a question about a companion.</p>
+        <div class="mt16" style="display:grid; gap:8px;">
+          <a href="#faq" data-nav="faq" class="btn btn-outline btn-small">Read the FAQ</a>
+          <a href="#contact" data-nav="contact" class="btn btn-outline btn-small">Contact our team</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px;">Companions</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Applying to join, managing visits, or a question about a booking.</p>
+        <div class="mt16" style="display:grid; gap:8px;">
+          <a href="#careers" data-nav="careers" class="btn btn-outline btn-small">Learn about the role</a>
+          <a href="#login" data-nav="login" class="btn btn-outline btn-small">Companion login</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px;">Partners</h3>
+        <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Health plans, employers, or anyone exploring a partnership.</p>
+        <div class="mt16" style="display:grid; gap:8px;">
+          <a href="#employers" data-nav="employers" class="btn btn-outline btn-small">For employers</a>
+          <a href="#health-plans" data-nav="health-plans" class="btn btn-outline btn-small">Health plans &amp; funding</a>
+        </div>
+      </div>
+    </div>
+    <div class="card mt32 center">
+      <h3 style="font-size:17px;">Still stuck?</h3>
+      <p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">Call us on <span data-copy-phone>+61 2 5550 1234</span> or send a message — a real person will get back to you.</p>
+      <a href="#contact" data-nav="contact" class="btn btn-primary mt16">Contact us</a>
+    </div>
   </div>
 </section>
 
@@ -909,6 +1196,13 @@
       <ul>
         <li><a href="#about" data-nav="about">About us</a></li>
         <li><a href="#trust" data-nav="trust">Trust &amp; safety</a></li>
+        <li><a href="#resources" data-nav="resources">Resources</a></li>
+        <li><a href="#impact" data-nav="impact">Impact</a></li>
+        <li><a href="#employers" data-nav="employers">For employers</a></li>
+        <li><a href="#health-plans" data-nav="health-plans">Health plans &amp; funding</a></li>
+        <li><a href="#careers" data-nav="careers">Work with us</a></li>
+        <li><a href="#locations" data-nav="locations">Service areas</a></li>
+        <li><a href="#support" data-nav="support">Support</a></li>
         <li><a href="#faq" data-nav="faq">FAQ</a></li>
         <li><a href="#contact" data-nav="contact">Contact us</a></li>
       </ul>
@@ -1011,9 +1305,12 @@
   }).join('');
 
   var TRUST = [
-    {id:'support', title:'Rated, background-checked companions', copy:'Every companion is screened, named, and rated by the families they visit.'},
-    {id:'healthcheck', title:'A health check every visit', copy:"Routine wellbeing checks, not just a pickup and drop-off."},
-    {id:'outing', title:'Support every day of the week', copy:"From errands to festivals, we're there for more than emergencies."}
+    {id:'pickup', title:'Promotes independence', copy:'Elders stay in the home they love, with help getting out and about instead of moving into care.'},
+    {id:'support', title:'Reduces isolation &amp; loneliness', copy:'Real company on every visit — we treat loneliness like the health issue it is, not an afterthought.'},
+    {id:'healthcheck', title:'Improves everyday wellbeing', copy:'Routine wellbeing checks catch small issues early, alongside the visit itself.'},
+    {id:'medicine', title:'Lowers the cost of full-time care', copy:'Pay only for the visits you need, instead of committing to residential care.'},
+    {id:'star', title:'Increases family peace of mind', copy:'Named, rated companions your family gets to know — so you always know who is caring for your elder.'},
+    {id:'hospital', title:'Reduces avoidable hospital visits', copy:'Regular check-ins and accompanied appointments help catch problems before they become emergencies.'}
   ];
   document.getElementById('home-trust').innerHTML = TRUST.map(function(t){
     return '<div class="trust-badge"><div class="trust-circle">'+icon(t.id,true)+'</div><h3 style="font-size:17px;">'+t.title+'</h3><p class="mt8" style="color:var(--ink-soft); font-size:14px;">'+t.copy+'</p></div>';
@@ -1281,20 +1578,126 @@
     render();
   })();
 
-  /* ---------- render: testimonials (clearly-marked placeholders) ---------- */
-  var tHtml = '';
-  for (var ti=0; ti<TESTIMONIALS_PLACEHOLDER; ti++){
-    tHtml += '<div class="card rel"><span class="sample-tag">Sample</span>'+
-      '<span class="stars">'+icon('star',false)+icon('star',false)+icon('star',false)+icon('star',false)+icon('star',false)+'</span>'+
-      '<p class="mt16" style="color:var(--ink-soft); font-style:italic;">"Placeholder quote — replace with a real family\'s words once you have one to share."</p>'+
-      '<p class="mt16" style="font-weight:700; font-size:14px;">— Add a real client name</p>'+
-    '</div>';
-  }
-  document.getElementById('home-testimonials').innerHTML = tHtml;
+  /* ---------- render: testimonials carousel (clearly-marked placeholders) ---------- */
+  (function(){
+    var slides = [];
+    for (var ti=0; ti<TESTIMONIALS_PLACEHOLDER; ti++){
+      slides.push('<div class="card rel"><span class="sample-tag">Sample</span>'+
+        '<span class="stars">'+icon('star',false)+icon('star',false)+icon('star',false)+icon('star',false)+icon('star',false)+'</span>'+
+        '<p class="mt16" style="color:var(--ink-soft); font-style:italic;">"Placeholder quote — replace with a real family\'s words once you have one to share."</p>'+
+        '<p class="mt16" style="font-weight:700; font-size:14px;">— Add a real client name</p>'+
+      '</div>');
+    }
+    var track = document.getElementById('home-testimonials');
+    var dotsEl = document.getElementById('home-testimonials-dots');
+    if (!track || !dotsEl) return;
+    track.innerHTML = slides.join('');
+    dotsEl.innerHTML = slides.map(function(_,i){
+      return '<button type="button" data-slide="'+i+'" aria-label="Show testimonial '+(i+1)+'" class="'+(i===0?'active':'')+'"></button>';
+    }).join('');
+    var dots = Array.prototype.slice.call(dotsEl.querySelectorAll('button'));
+    function goTo(i){
+      track.style.transform = 'translateX(-'+(i*100)+'%)';
+      dots.forEach(function(d,di){ d.classList.toggle('active', di===i); });
+    }
+    dots.forEach(function(d){
+      d.addEventListener('click', function(){ goTo(parseInt(d.getAttribute('data-slide'),10)); });
+    });
+  })();
+
+  /* ---------- render: service area / locations list ---------- */
+  var SUBURBS = ['Glebe','Surry Hills','Ultimo','Haymarket','Newtown','Redfern','Pyrmont','Chippendale'];
+  var locationsListEl = document.getElementById('locations-list');
+  if (locationsListEl) locationsListEl.innerHTML = SUBURBS.map(function(s){
+    return '<div class="card center" style="padding:20px;"><h3 style="font-size:16px;">'+s+'</h3><span class="tag mt8" style="display:inline-flex;">Now serving</span></div>';
+  }).join('');
 
   /* ---------- render: faq ---------- */
   document.getElementById('faq-list').innerHTML = FAQS.map(function(f){
     return '<details class="faq-item"><summary>'+f.q+icon('plus',true)+'</summary><p>'+f.a+'</p></details>';
+  }).join('');
+
+  /* ---------- render: resources (sample guides + impact stats) ---------- */
+  var RESOURCE_STATS = [
+    {value:'1,200+', label:'Visits completed'},
+    {value:'180+', label:'Families supported'},
+    {value:'4.9★', label:'Average companion rating'},
+    {value:'20+', label:'Companions on the team'}
+  ];
+  var GUIDES = [
+    {tag:'Family Guide', category:'guide', title:'Recognizing loneliness in an aging parent', copy:'The quiet signs that a visit or a phone call often misses, and simple ways to check in.'},
+    {tag:'Research', category:'research', title:'The cost of isolation: what the evidence says', copy:'A short look at why regular companionship is linked to better health outcomes for older adults.'},
+    {tag:'Care Guide', category:'guide', title:"Preparing for your elder's first companion visit", copy:'What to share with your companion beforehand so the first visit goes smoothly.'},
+    {tag:'Careers', category:'career', title:'Is being a companion right for you?', copy:'What a typical visit looks like, and the kind of person who tends to enjoy this work.'}
+  ];
+  var resourcesImpactEl = document.getElementById('resources-impact');
+  if (resourcesImpactEl) resourcesImpactEl.innerHTML = RESOURCE_STATS.map(function(s){
+    return '<div class="card center"><div style="font-family:\'Fraunces\',sans-serif; font-size:32px; color:var(--primary-dark); font-weight:800;">'+s.value+'</div><div class="mt8" style="font-size:13.5px; color:var(--muted);">'+s.label+'</div></div>';
+  }).join('');
+
+  var RESOURCE_FILTERS = [
+    {id:'all', label:'All'},
+    {id:'guide', label:'Family &amp; care guides'},
+    {id:'research', label:'Research'},
+    {id:'career', label:'Careers'}
+  ];
+  var resourcesFilterEl = document.getElementById('resources-filter');
+  var resourcesListEl = document.getElementById('resources-list');
+  function guideCard(g){
+    return '<div class="card rel" data-category="'+g.category+'"><span class="sample-tag">Sample</span><span class="tag">'+g.tag+'</span><h3 class="mt16" style="font-size:18px;">'+g.title+'</h3><p class="mt8" style="color:var(--ink-soft);font-size:14.5px;">'+g.copy+'</p><span class="btn btn-outline btn-small mt16" style="pointer-events:none;opacity:.7;">Coming soon</span></div>';
+  }
+  function renderGuides(filter){
+    var list = filter === 'all' ? GUIDES : GUIDES.filter(function(g){ return g.category === filter; });
+    resourcesListEl.innerHTML = list.map(guideCard).join('');
+  }
+  if (resourcesFilterEl && resourcesListEl){
+    resourcesFilterEl.innerHTML = RESOURCE_FILTERS.map(function(f,i){
+      return '<button type="button" data-filter="'+f.id+'" class="'+(i===0?'active':'')+'">'+f.label+'</button>';
+    }).join('');
+    resourcesFilterEl.querySelectorAll('button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        resourcesFilterEl.querySelectorAll('button').forEach(function(b){ b.classList.toggle('active', b===btn); });
+        renderGuides(btn.getAttribute('data-filter'));
+      });
+    });
+    renderGuides('all');
+  }
+
+  /* ---------- render: impact page (real site numbers + clearly-flagged placeholders) ---------- */
+  var IMPACT_COST = [
+    {value: PRICING[0].price.replace('from ',''), label:'Single visits start from'},
+    {value:'100%', label:'Companions background-checked before their first visit'},
+    {value:String(PRICING.length), label:"Package tiers to fit any family's budget"}
+  ];
+  var IMPACT_UTILIZATION = [
+    {value:String(SERVICES.length), label:'Types of everyday support covered, from pickup to health checks'},
+    {value:'4', label:'Ways to get involved — as an elder, family member or companion'},
+    {value:String(FESTIVALS.length), label:'Community festivals to join this year'}
+  ];
+  var IMPACT_OUTCOMES = [
+    {value:'95%', label:"Of families say they'd recommend their companion"},
+    {value:'80%', label:'Of elders say visits reduced feelings of loneliness'},
+    {value:'4.9★', label:'Average companion rating, once ratings start coming in'}
+  ];
+  function impactTile(s){
+    return '<div class="card center"><div style="font-family:\'Fraunces\',sans-serif; font-size:32px; color:var(--primary-dark); font-weight:800;">'+s.value+'</div><div class="mt8" style="font-size:13.5px; color:var(--muted);">'+s.label+'</div></div>';
+  }
+  var impactCostEl = document.getElementById('impact-cost');
+  if (impactCostEl) impactCostEl.innerHTML = IMPACT_COST.map(impactTile).join('');
+  var impactUtilizationEl = document.getElementById('impact-utilization');
+  if (impactUtilizationEl) impactUtilizationEl.innerHTML = IMPACT_UTILIZATION.map(impactTile).join('');
+  var impactOutcomesEl = document.getElementById('impact-outcomes');
+  if (impactOutcomesEl) impactOutcomesEl.innerHTML = IMPACT_OUTCOMES.map(impactTile).join('');
+
+  /* ---------- render: companion quotes (Work With Us page) ---------- */
+  var COMPANION_QUOTES = [
+    {name:'Sample companion', quote:'I love that I get to choose my own hours and still make a real difference for someone.'},
+    {name:'Sample companion', quote:"It doesn't feel like work when you get to know the people you're visiting."},
+    {name:'Sample companion', quote:'Flexible enough to fit around my studies, meaningful enough that I look forward to it.'}
+  ];
+  var companionQuotesEl = document.getElementById('companion-quotes');
+  if (companionQuotesEl) companionQuotesEl.innerHTML = COMPANION_QUOTES.map(function(q){
+    return '<div class="card rel"><span class="sample-tag">Sample</span><p style="color:var(--ink-soft); font-style:italic;">"'+q.quote+'"</p><p class="mt16" style="font-weight:700; font-size:14px;">— '+q.name+'</p></div>';
   }).join('');
 
   /* ---------- routing ---------- */
