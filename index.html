@@ -355,7 +355,6 @@
   .hero-band{background:var(--home-bg); position:relative; overflow:hidden; padding-bottom:24px;}
   .hero-grid{max-width:1240px; margin-inline:auto; align-items:center;}
   .hero-copy{padding:56px 24px 72px 24px;}
-  @media (min-width:901px){ .hero-copy{padding-left:max(24px, calc((100vw - 1240px)/2 + 24px));} }
   .hero h1{color:var(--navy); font-size:clamp(44px,7vw,92px); line-height:.98; letter-spacing:-.035em;}
   .hero-kicker{font-family:var(--serif); font-weight:600; font-size:21px; color:var(--navy); letter-spacing:-.01em;}
   .hero .lede{color:var(--ink); font-size:19px;}
@@ -956,6 +955,9 @@
     .nav-backdrop.show{opacity:1; pointer-events:auto;}
   }
   @media (max-width:520px){ .header-cta .btn-primary{display:none;} }
+
+  /* hero text column: the grid is already centred (max-width 1240px, margin auto), so no extra left padding */
+  @media (min-width:901px){ .hero-copy{padding-left:24px; padding-right:24px;} .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);} }
 </style>
 </head>
 <body>
