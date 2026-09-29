@@ -23,6 +23,8 @@ All photos are from Unsplash (https://unsplash.com) under the Unsplash License: 
 | images/team.jpg | Mapbox | https://unsplash.com/photos/ZT5v0puBjZI | Careers hero |
 | images/tech.jpg | Grab | https://unsplash.com/photos/uIKlD9dc_Bc | Our Platform hero · Sunil story · digital solution |
 
+Each photo also has a sharper `-2x.jpg` version (1800px wide). Browsers load it automatically only on high-resolution screens or when zoomed in, so normal visitors still get the lighter file.
+
 images/companion-1.jpg to companion-4.jpg are the companion profile photos from the original site file.
 
 Story names and details are samples: people in the photos are models, not real Seekers or companions. Replace with real stories (with consent) before launch.
